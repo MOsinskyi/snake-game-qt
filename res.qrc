@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/sounds">
-        <file>eatSound.wav</file>
-        <file>deadSound.wav</file>
+        <file>Sounds/deadSound.mp3</file>
+        <file>Sounds/eatSound.wav</file>
     </qresource>
 </RCC>

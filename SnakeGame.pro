@@ -9,28 +9,30 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    gameaudio.cpp \
-    gamefield.cpp \
-    gamewindow.cpp \
-    main.cpp \
-    snake.cpp \
-    userfield.cpp
+    Sources/gameaudio.cpp \
+    Sources/gamefield.cpp \
+    Sources/gamewindow.cpp \
+    Sources/main.cpp \
+    Sources/snake.cpp \
+    Sources/userfield.cpp \
 
 HEADERS += \
-    colormanager.h \
-    fontmanager.h \
-    gameaudio.h \
-    gamefield.h \
-    gamewindow.h \
-    snake.h \
-    userfield.h
+    Headers/colormanager.h \
+    Headers/fontmanager.h \
+    Headers/gameaudio.h \
+    Headers/gamefield.h \
+    Headers/gamesound.h \
+    Headers/gamewindow.h \
+    Headers/snake.h \
+    Headers/userfield.h \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-DISTFILES +=
+DISTFILES += \
+    README.md
 
 FORMS +=
 
