@@ -22,8 +22,10 @@ This project is a simple yet fun implementation of the Snake game using C++ and 
 
 ## :deciduous_tree: ​Screenshots 
 
-<img src="images/screenshot1.png" alt="screenshot1" align="left" />
+![screenshot1](images/screenshot1.png)
+
 ![screenshot2](images/screenshot2.png)
+
 ![screenshot3](images/screenshot3.png)
 
 ## 🚧 Requirements 
