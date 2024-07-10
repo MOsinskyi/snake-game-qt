@@ -1,15 +1,15 @@
-#include "gameaudio.h"
+#include "Headers/gameaudio.h"
 
 GameAudio::GameAudio() {
     eatSound = new SoundAsset;
     deadSound = new SoundAsset;
 
     eatSound->getPlayer()->setAudioOutput(eatSound->getOutput());
-    eatSound->getPlayer()->setSource(QUrl("qrc:/sounds/eatSound.wav"));
+    eatSound->getPlayer()->setSource(QUrl("qrc:/sounds/Sounds/eatSound.wav"));
     eatSound->getOutput()->setVolume(0.2);
 
     deadSound->getPlayer()->setAudioOutput(deadSound->getOutput());
-    deadSound->getPlayer()->setSource(QUrl("qrc:/sounds/deadSound.wav"));
+    deadSound->getPlayer()->setSource(QUrl("qrc:/sounds/Sounds/deadSound.wav"));
     deadSound->getOutput()->setVolume(0.2);
 }
 

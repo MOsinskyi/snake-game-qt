@@ -4,8 +4,8 @@
 #include <QMainWindow>
 #include <QGridLayout>
 #include <QWidget>
-#include <gamefield.h>
-#include <userfield.h>
+#include <Headers/gamefield.h>
+#include <Headers/userfield.h>
 
 class GameWindow : public QMainWindow
 {

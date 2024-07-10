@@ -1,4 +1,4 @@
-#include "snake.h"
+#include "Headers/snake.h"
 
 SnakeElement::SnakeElement(int x, int y)
 {

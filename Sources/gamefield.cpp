@@ -1,6 +1,6 @@
-#include "gamefield.h"
-#include "fontmanager.h"
-#include "colormanager.h"
+#include "Headers/gamefield.h"
+#include "Headers/fontmanager.h"
+#include "Headers/colormanager.h"
 
 GameField::GameField()
 {

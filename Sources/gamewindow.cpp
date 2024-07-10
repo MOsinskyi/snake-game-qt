@@ -1,5 +1,5 @@
-#include "gamewindow.h"
-#include "colormanager.h"
+#include "Headers/gamewindow.h"
+#include "Headers/colormanager.h"
 
 GameWindow::GameWindow(QWidget *parent)
     : QMainWindow(parent)
