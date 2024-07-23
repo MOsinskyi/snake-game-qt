@@ -20,6 +20,16 @@ This project is a simple yet fun implementation of the Snake game using C++ and 
 
 * Sound effects
 
+## :building_construction: ​Build
+
+|                           Windows                            |                            Linux                             |                            MacOS                             |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| ![Static Badge](https://img.shields.io/badge/build-passing-green) | ![Static Badge](https://img.shields.io/badge/build-passing-green) | ![Static Badge](https://img.shields.io/badge/build-failed-red) |
+
+## :gear: Assets
+
+Game font: [XSSNAKE](https://github.com/blaise-io/xssnake) [**Author**: [blaise-io](https://github.com/blaise-io)]
+
 ## :deciduous_tree: ​Screenshots 
 
 <img src="images/screenshot1.png" alt="screenshot1" align="left" />
@@ -32,6 +42,84 @@ Qt installed (Qt 6.x.x or higher)
 
 ## 💡Installation 
 
+### Windows
+
+#### Installer
+
+1. Chose [`snake-game-installer-windows.exe`](https://github.com/MOsinskyi/snake-game-qt/releases/download/v1.0.0/snake-game-installer-windows.exe) from Release page and install them to your computer
+
+2. Open Installer
+3. Follow the installer instructions
+4. Done :white_check_mark:
+
+#### :package: Portable
+
+1. Chose [`snake-game-portable-windows.zip`](https://github.com/MOsinskyi/snake-game-qt/releases/download/v1.0.0/snake-game-portable-windows.zip) from Release page and install them to your computer
+
+2. Unpack the package
+
+3. Run `SnakeGame.exe`
+
+4. Done :white_check_mark:
+
+### Linux
+
+#### Ubuntu Package
+
+1. Chose [`snake-game-ubuntu.deb`](https://github.com/MOsinskyi/snake-game-qt/releases/download/v1.0.0/snake-game-ubuntu.deb) from Release page and install them to your computer
+
+2. Go to downloads folder
+
+3. Run the command in terminal:
+
+   ```bash
+   sudo dpkg -r snake-game-ubuntu.deb
+	```
+4. Done :white_check_mark:
+
+#### Installer
+
+1. Chose [`snake-game-installer-linux.run`](https://github.com/MOsinskyi/snake-game-qt/releases/download/v1.0.0/snake-game-installer-linux.run) from Release page and install them to your computer;
+
+2. Go to downloads folder
+
+3. Run the command:
+
+   ```bash
+   chmod +x snake-game-installer-linux.run
+   ```
+
+4. Double click to installer **or** run the command:
+
+   ```bash
+   ./snake-game-nstaller-linux.run
+   ```
+
+5. Follow the installer instructions
+
+6. Done :white_check_mark:
+
+#### :package: Portable
+
+1. Chose [`snake-game-portable-linux.zip`](https://github.com/MOsinskyi/snake-game-qt/releases/download/v1.0.0/snake-game-portable-linux.zip) from Release page and install them to your computer
+
+2. Unpack the package
+
+3. Run the command:
+
+   ```bash
+   cd snake-game-portable-linux
+   chmod +x SnakeGame.sh
+   ```
+
+4. Run `SnakeGame.sh`:
+
+   ```bash
+   ./SnakeGame.sh
+   ```
+
+5. Done :white_check_mark:
+
 ### Clone repository from GitHub
 
 #### :footprints: Steps ​
@@ -41,7 +129,7 @@ Qt installed (Qt 6.x.x or higher)
    ```bash
    git clone https://github.com/MOsinskyi/snake-game-qt.git
    cd snake-game-qt
-   ```
+	```
 
 2. Open the project in Qt Creator:
 
@@ -76,13 +164,13 @@ Contributions are welcome! If you have any suggestions, bug reports, or feature 
 
    ```bash
    git checkout -b feature/YourFeature
-   ```
+	```
 
 3. Commit your changes:
 
    ```bash
    git commit -m 'Add some feature'
-   ```
+	```
 
 4. Push to the branch:
 

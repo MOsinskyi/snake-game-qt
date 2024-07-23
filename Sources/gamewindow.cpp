@@ -4,12 +4,14 @@
 GameWindow::GameWindow(QWidget *parent)
     : QMainWindow(parent)
 {
-    setFixedSize(Width, Height);
-
     gameField = new GameField();
     userField = new UserField();
     layout = new QGridLayout();
     centralWidget = new QWidget();
+
+    setFixedSize(Width, Height);
+    setWindowTitle("Snake Game");
+    setWindowIcon(QIcon("qrc:/icons/images/windowIcon.png"));
 
     connect(gameField, &GameField::changingUserFieldPauseText, userField, &UserField::changePauseText);
     connect(gameField, &GameField::changingUserFieldScoreText, userField, &UserField::changeScoreText);

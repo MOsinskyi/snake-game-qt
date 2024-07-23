@@ -3,4 +3,7 @@
         <file>Sounds/deadSound.mp3</file>
         <file>Sounds/eatSound.wav</file>
     </qresource>
+    <qresource prefix="/icons">
+        <file>images/windowIcon.png</file>
+    </qresource>
 </RCC>
