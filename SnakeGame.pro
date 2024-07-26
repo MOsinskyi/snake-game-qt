@@ -21,7 +21,6 @@ HEADERS += \
     Headers/fontmanager.h \
     Headers/gameaudio.h \
     Headers/gamefield.h \
-    Headers/gamesound.h \
     Headers/gamewindow.h \
     Headers/snake.h \
     Headers/userfield.h \
