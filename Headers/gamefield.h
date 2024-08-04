@@ -46,6 +46,7 @@ private:
     bool onPause;
     bool moveIsBlocked;
     bool isGameOver;
+    bool objectsCleared;
 
     Snake *snake;
     SnakeElement *food;
@@ -65,6 +66,7 @@ private:
     void saveBestScore();
 
     bool checkCollision(SnakeElement *firstObj, SnakeElement *secondObj);
+    void drawGameFieldBrick(QBrush gameFieldDarkBrickBrush, QPen objectsPen, QPainter canvas);
 };
 
 #endif // GAMEFIELD_H

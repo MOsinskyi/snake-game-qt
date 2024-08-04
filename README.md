@@ -1,4 +1,4 @@
-![Static Badge](https://img.shields.io/badge/Qt-6.7.2-brightgreen) ![GitHub License](https://img.shields.io/github/license/MOsinskyi/snake-game-qt) ![GitHub repo size](https://img.shields.io/github/repo-size/MOsinskyi/snake-game-qt) 
+![Static Badge](https://img.shields.io/badge/Qt-6.7.2-brightgreen) ![GitHub License](https://img.shields.io/github/license/MOsinskyi/snake-game-qt) ![GitHub repo size](https://img.shields.io/github/repo-size/MOsinskyi/snake-game-qt) ![GitHub Release](https://img.shields.io/github/v/release/MOsinskyi/snake-game-qt?color=purple) 
 
 # :snake: Snake Game - Qt
 
@@ -32,9 +32,17 @@ Game font: [XSSNAKE](https://github.com/blaise-io/xssnake) [**Author**: [blaise-
 
 ## :deciduous_tree: ​Screenshots 
 
-![screenshot1](images/screenshot1.png)
-![screenshot2](images/screenshot2.png)
-![screenshot3](images/screenshot3.png)
+<details><summary>Click me 🐈</summary>
+
+![screenshot1](Readme_Images/screenshot1.png)
+
+![screenshot2](Readme_Images/screenshot2.png)
+
+![screenshot3](Readme_Images/screenshot3.png)
+
+![screenshot4](Readme_Images/screenshot4.png)
+
+</details>
 
 ## 🚧 Requirements 
 
@@ -46,7 +54,7 @@ Qt installed (Qt 6.x.x or higher)
 
 #### Installer
 
-1. Chose [`snake-game-installer-windows.exe`](https://github.com/MOsinskyi/snake-game-qt/releases/download/v1.0.0/snake-game-installer-windows.exe) from Release page and install them to your computer
+1. Chose `snake-game-installer-windows.exe` from Release page and install them to your computer
 
 2. Open Installer
 3. Follow the installer instructions
@@ -54,7 +62,7 @@ Qt installed (Qt 6.x.x or higher)
 
 #### :package: Portable
 
-1. Chose [`snake-game-portable-windows.zip`](https://github.com/MOsinskyi/snake-game-qt/releases/download/v1.0.0/snake-game-portable-windows.zip) from Release page and install them to your computer
+1. Chose `snake-game-portable-windows.zip` from Release page and install them to your computer
 
 2. Unpack the package
 
@@ -66,7 +74,7 @@ Qt installed (Qt 6.x.x or higher)
 
 #### Ubuntu Package
 
-1. Chose [`snake-game-ubuntu.deb`](https://github.com/MOsinskyi/snake-game-qt/releases/download/v1.0.0/snake-game-ubuntu.deb) from Release page and install them to your computer
+1. Chose `snake-game-ubuntu.deb` from Release page and install them to your computer
 
 2. Go to downloads folder
 
@@ -79,7 +87,7 @@ Qt installed (Qt 6.x.x or higher)
 
 #### Installer
 
-1. Chose [`snake-game-installer-linux.run`](https://github.com/MOsinskyi/snake-game-qt/releases/download/v1.0.0/snake-game-installer-linux.run) from Release page and install them to your computer;
+1. Chose `snake-game-installer-linux.run` from Release page and install them to your computer;
 
 2. Go to downloads folder
 
@@ -101,7 +109,7 @@ Qt installed (Qt 6.x.x or higher)
 
 #### :package: Portable
 
-1. Chose [`snake-game-portable-linux.zip`](https://github.com/MOsinskyi/snake-game-qt/releases/download/v1.0.0/snake-game-portable-linux.zip) from Release page and install them to your computer
+1. Chose `snake-game-portable-linux.zip` from Release page and install them to your computer
 
 2. Unpack the package
 

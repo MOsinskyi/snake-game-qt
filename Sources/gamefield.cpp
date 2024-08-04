@@ -60,23 +60,44 @@ void GameField::paintEvent(QPaintEvent *event)
 {
     Q_UNUSED(event);
     QPainter canvas;
-    QBrush objectsBrush = QBrush(QColor(objectsColor));
+    QBrush snakeAndTextBrush = QBrush(QColor(objectsColor));
+    QBrush appleBrush = QBrush(QColor(appleColor));
+    QBrush gameFieldDarkBrickBrush = QBrush(QColor(brickColor));
+    QBrush gameFieldLightBrickBrush = QBrush(QColor(backGroundColorRgb));
 
     canvas.begin(this);
-
-    QRect gameField = QRect(0, 0, width() - 1, height() - 1);
     QPen borderPen, objectsPen;
 
     borderPen.setStyle(Qt::DashLine);
     objectsPen.setStyle(Qt::SolidLine);
 
-    canvas.setPen(borderPen);
+    for (int i = 0; i < fieldSizeInSnakeElements; ++i) {
+        for (int j = 0; j < fieldSizeInSnakeElements; ++j){
+            QRect gameFieldBrick = QRect(j * snakeElementSize, i * snakeElementSize, snakeElementSize, snakeElementSize);
+            if ((i + j) % 2 == 0){
+                canvas.setBrush(gameFieldDarkBrickBrush);
+                objectsPen.setBrush(gameFieldDarkBrickBrush);
+            }
+            else{
+                canvas.setBrush(gameFieldLightBrickBrush);
+                objectsPen.setBrush(gameFieldLightBrickBrush);
+            }
 
+            canvas.setPen(objectsPen);
+            canvas.drawRect(gameFieldBrick);
+        }
+    }
+
+    QRect gameField = QRect(0, 0, width()-1, height()-1);
+    canvas.setPen(borderPen);
+    canvas.setBrush(Qt::NoBrush);
     canvas.drawRect(gameField);
+
+    canvas.setPen(borderPen);
+    canvas.setBrush(snakeAndTextBrush);
 
     // Game Over
     if (isGameOver) {
-        player->playDeadSound();
         canvas.setFont(endGameTextFont);
         canvas.drawText(gameField, Qt::AlignCenter, "Game Over\n\n");
         canvas.setFont(endGameTextFontBestScore);
@@ -86,7 +107,7 @@ void GameField::paintEvent(QPaintEvent *event)
     }
 
     canvas.setPen(objectsPen);
-    canvas.setBrush(objectsBrush);
+    canvas.setBrush(snakeAndTextBrush);
 
     // Draw snake
     for(int i = 0; i < snake->body.size(); ++i) {
@@ -95,6 +116,8 @@ void GameField::paintEvent(QPaintEvent *event)
                            snakeElementSize,
                            snakeElementSize);
     }
+
+    canvas.setBrush(appleBrush);
 
     // Draw food
     canvas.drawEllipse(food->getX() * snakeElementSize,
@@ -149,14 +172,19 @@ void GameField::setGameOnPause()
 
 void GameField::endGame()
 {
+    isGameOver = true;
+
     if (score > bestScore){
         bestScore = score;
         saveBestScore();
     }
 
-    isGameOver = true;
+    player->playDeadSound();
+
     emit changingUserFieldPauseText("New game");
+
     gameTimer->stop();
+    qDebug() << "gameTimerStoped!";
 }
 
 void GameField::newGame()
@@ -164,11 +192,15 @@ void GameField::newGame()
     onPause = false;
     moveIsBlocked = false;
     isGameOver = false;
+    objectsCleared = false;
+
+    gameTimer = new QTimer;
 
     snake = new Snake;
-    gameTimer = new QTimer;
     food = new SnakeElement(fieldSizeInSnakeElements/2, fieldSizeInSnakeElements/2);
+
     randomGenerator = new QRandomGenerator;
+
     player = new GameAudio;
 
     score = 0;
@@ -176,6 +208,7 @@ void GameField::newGame()
     connect(gameTimer, &QTimer::timeout, this, &GameField::gameLoopSlot);
 
     gameTimer->start(timerClockSpeed);
+    qDebug() << "gameTimerStarted...";
 
     loudBestScore();
 
@@ -185,10 +218,15 @@ void GameField::newGame()
 
 void GameField::clearObjects()
 {
+    if (objectsCleared) return;
+
     delete snake;
     delete gameTimer;
     delete food;
     delete randomGenerator;
+    objectsCleared = true;
+
+    qDebug() << "Objects deleted";
 }
 
 void GameField::createFood()

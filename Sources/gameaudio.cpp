@@ -21,11 +21,13 @@ SoundAsset::SoundAsset()
 
 void GameAudio::playEatSound()
 {
+    deadSound->getPlayer()->stop();
     eatSound->getPlayer()->play();
 }
 
 void GameAudio::playDeadSound()
 {
+    eatSound->getPlayer()->stop();
     deadSound->getPlayer()->play();
 }
 
